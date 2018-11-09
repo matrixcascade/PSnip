@@ -1,0 +1,18 @@
+CubeEvent 说明文档
+
+CubeEvent提供一个异步的Signal Event接口，在Windows的平台，它是内核实现的，最大支持64个Event
+
+使用Create来创建一个Event，如果失败将返回FALSE
+BOOL Create();
+
+使用Wait来等待这个Event,ms是等待毫秒数，当ms为-1时，表示无限等待，如果超时，将会返回FALSE
+BOOL Wait(unsigned int ms);
+
+使用Set来设置这个Event,Wait会立刻返回
+void Set();
+
+使用Reset来重置这个Event
+void Reset();
+
+使用Free来释放这个Event，并关闭其句柄
+void Free();

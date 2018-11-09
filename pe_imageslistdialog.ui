@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>pe_imagesListDialog</class>
+ <widget class="QDialog" name="pe_imagesListDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>570</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>570</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>pe_imagesListDialog</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="psnip.qrc">
+    <normaloff>:/PSnip/Resources/Mini.png</normaloff>:/PSnip/Resources/Mini.png</iconset>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QWidget" name="widget_Content" native="true">
+     <layout class="QVBoxLayout" name="verticalLayout_WidgetContent">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>2</number>
+      </property>
+      <property name="topMargin">
+       <number>2</number>
+      </property>
+      <property name="rightMargin">
+       <number>2</number>
+      </property>
+      <property name="bottomMargin">
+       <number>3</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="widget_3" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>32</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>34</height>
+         </size>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="frame">
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>3</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_Stay">
+              <property name="minimumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/staying.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/staying_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/staying_Down.png);}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_unpin">
+              <property name="minimumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/unpinned.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/unpinned_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/unpinned_Down.png);}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_6">
+              <property name="minimumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>32</width>
+                <height>32</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/hide.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/hide_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/hide_Down.png);}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>110</height>
+         </size>
+        </property>
+        <property name="acceptDrops">
+         <bool>true</bool>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="pushButton_ImageView">
+             <property name="minimumSize">
+              <size>
+               <width>94</width>
+               <height>94</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/Snapshot.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/Snapshot_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/Snapshot_Down.png);}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_Collection">
+             <property name="minimumSize">
+              <size>
+               <width>94</width>
+               <height>94</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/CollectionBtn.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/CollectionBtn_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/CollectionBtn_Down.png);}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_TakeSnip">
+             <property name="minimumSize">
+              <size>
+               <width>94</width>
+               <height>94</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/TakeSnapshot.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/TakeSnapshot_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/TakeSnapshot_Down.png);}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_SelectArea">
+             <property name="minimumSize">
+              <size>
+               <width>94</width>
+               <height>94</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/SelectArea.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/SelectArea_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/SelectArea_Down.png);}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_CollapseAll">
+             <property name="minimumSize">
+              <size>
+               <width>94</width>
+               <height>94</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>94</width>
+               <height>94</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/minimize.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/minimize_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/minimize_Down.png);}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_ConfigView">
+             <property name="minimumSize">
+              <size>
+               <width>94</width>
+               <height>94</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{border-image: url(:/PSnip/Resources/config.png);}
+QPushButton:hover{border-image: url(:/PSnip/Resources/config_Over.png);}
+QPushButton:pressed{border-image: url(:/PSnip/Resources/config_Down.png);}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="widget_Progress_Msg" native="true">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>84</height>
+         </size>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_progerss">
+           <property name="text">
+            <string>Processing</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="progressBar_Mission">
+           <property name="value">
+            <number>24</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="psnip.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>pe_imagesListDialog</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>551</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-3</x>
+     <y>42</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

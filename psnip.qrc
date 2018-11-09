@@ -1,0 +1,41 @@
+<RCC>
+    <qresource prefix="/PSnip">
+        <file>Resources/hide.png</file>
+        <file>Resources/hide_Down.png</file>
+        <file>Resources/hide_Over.png</file>
+        <file>Resources/staying.png</file>
+        <file>Resources/staying_Down.png</file>
+        <file>Resources/staying_Over.png</file>
+        <file>Resources/unpinned.png</file>
+        <file>Resources/unpinned_Down.png</file>
+        <file>Resources/unpinned_Over.png</file>
+        <file>Resources/minimize.png</file>
+        <file>Resources/minimize_Down.png</file>
+        <file>Resources/minimize_Over.png</file>
+        <file>Resources/config.png</file>
+        <file>Resources/config_Down.png</file>
+        <file>Resources/config_Over.png</file>
+        <file>Resources/SaveProject.png</file>
+        <file>Resources/SaveProject_Down.png</file>
+        <file>Resources/SaveProject_Over.png</file>
+        <file>Resources/Snapshot_Down.png</file>
+        <file>Resources/Snapshot_Over.png</file>
+        <file>Resources/TakeSnapshot.png</file>
+        <file>Resources/TakeSnapshot_Down.png</file>
+        <file>Resources/TakeSnapshot_Over.png</file>
+        <file>Resources/Snapshot.png</file>
+        <file>Resources/Disk.png</file>
+        <file>Resources/Disk_Down.png</file>
+        <file>Resources/Disk_Over.png</file>
+        <file>Resources/CollectionGuider.png</file>
+        <file>Resources/Collection.png</file>
+        <file>Resources/CollectionBtn.png</file>
+        <file>Resources/CollectionBtn_Down.png</file>
+        <file>Resources/CollectionBtn_Over.png</file>
+        <file>Resources/SelectArea.png</file>
+        <file>Resources/SelectArea_Down.png</file>
+        <file>Resources/SelectArea_Over.png</file>
+        <file>Resources/Mini.png</file>
+        <file>Resources/Donate.png</file>
+    </qresource>
+</RCC>

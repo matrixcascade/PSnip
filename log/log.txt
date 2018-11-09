@@ -1,0 +1,3 @@
+PT_ERROR(x) 发布一个PainterEngine错误日志；Public a painterenging error log
+PT_WARNING(x)  发布一个PainterEngine警告日志；Public a painterenging warning log
+PT_LOG(x) 发布一个PainterEngine日志；Public a painterenging log

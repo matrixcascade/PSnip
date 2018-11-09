@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogDonate</class>
+ <widget class="QDialog" name="DialogDonate">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>643</width>
+    <height>726</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Thanks</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/PSnip/Resources/Mini.png</normaloff>:/PSnip/Resources/Mini.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255, 255, 255);</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>340</y>
+     <width>611</width>
+     <height>321</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PSnip是一款免费，开源的参考图软件：&lt;/p&gt;&lt;p&gt;为提升绘画制图效率及更好的操作体验而不懈努力。&lt;/p&gt;&lt;p&gt;您的捐赠能帮助并鼓励我们将PSnip做的更好。&lt;/p&gt;&lt;p&gt;你可以将你的建议发送至matrixcascade@gmali.com&lt;/p&gt;&lt;p&gt;帮助我们改善PSnip。&lt;/p&gt;&lt;p&gt;作者信息：&lt;/p&gt;&lt;p&gt;matrixcascade@gmail.com 微博：@这里是羽大人&lt;/p&gt;&lt;p&gt;DBinary All rights reserved&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>0</y>
+     <width>331</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget{background-image: url(:/PSnip/Resources/Donate.png);}</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>670</y>
+     <width>191</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>继续努力</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="psnip.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>DialogDonate</receiver>
+   <slot>hide()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>822</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>554</x>
+     <y>804</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

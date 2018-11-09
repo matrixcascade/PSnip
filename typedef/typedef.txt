@@ -1,0 +1,46 @@
+类型对照
+typedef		void			pt_void;
+typedef		int			pt_bool;
+typedef		unsigned int		pt_dword;
+typedef     	unsigned short		pt_word;
+typedef		unsigned short		pt_ushort;
+typedef     	unsigned int		pt_uint;
+typedef     	int			pt_int;
+typedef		char			pt_char;
+typedef		char			pt_byte;
+typedef		unsigned char		pt_uchar;
+typedef		unsigned long		pt_ulong;
+typedef		long			pt_long;
+typedef     	float			pt_float;
+typedef     	double			pt_double;
+
+pt_matrix	PainterEngine 矩阵结构支撑矩阵运算，默认为0矩阵
+		Identity()-单位矩阵
+		Translation(float x,float y,float z)-矩阵平移
+		RotateX(float Angle)；RotateY(float Angle)；RotateZ(float Angle)矩阵旋转
+		Scale(float x,float y,float z)-矩阵缩放
+		Inverse()-矩阵求逆，返回PT_FALSE为不存在逆矩阵
+		Transpose()-矩阵转置
+
+Pt_Matrix 	PainterEngine 矩阵类
+pt_color 	PainterEngine 颜色结构体，支持加减运算
+pt_point 	PainterEngine 点坐标结构体，支持加减运算
+
+pt_vector	PainterEngine 向量
+		dot(pt_point &vec)点乘
+		cross(pt_point &vec)叉乘
+		mod()-向量的模
+		square()模的平方
+		unit()转换为单位向量
+
+pt_rect 	PainterEngine 矩形，不支持加减运算，其中，方法IsPointInRegion(pt_point point)可用于判断点是否在矩形内
+
+pt_string	PainterEngine 字符串类，支撑字符串加减运算，使用toInt(),toFloat()转换为数字
+		upperCase()转换为大写
+		lowerCase()转换为小写
+pt_string       的加减运算及拷贝速度缓慢，不要使用在高实时函数中
+pt_buffer		painterEngine 内存管理类
+
+PT_STRCPY PainterEngine字符串拷贝
+PT_STRCAT PainterEngine字符串衔接
+PT_ITOA   PainterEngine数字转文本

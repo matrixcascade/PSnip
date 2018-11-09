@@ -1,0 +1,15 @@
+pt_bool Pt_System_Loop(void *iost=NULL); //Pt Engine的系统循环
+//在Main函数中假如以下的代码
+//while(Pt_System_Loop)
+//{
+//	Game Looper.....
+//}
+
+//其中，iost是传递的循环参数
+
+void Pt_System_Free(void *iost=NULL);
+//释放系统循环资源，在游戏关闭时应该进行调用
+
+
+void Pt_SystemLastError();
+//以printf的形式输出系统的循环错误

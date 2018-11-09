@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{374656b1-854a-4a5d-a4c8-08a5dc728a8f}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{dd1fa283-078f-4811-8986-8e8c7bc9c457}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Header Files\GUI">
+      <UniqueIdentifier>{d841aa90-016f-4873-821f-975e689f64b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\plugins">
+      <UniqueIdentifier>{17aeb948-e9d2-4028-b472-755b5c675577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{36ca0273-5dad-4459-9843-1bc1bbadd9b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Plugins">
+      <UniqueIdentifier>{6b5cf40e-fde6-4fc5-a05b-c0403cd74d5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\qxtGlobalshortcut">
+      <UniqueIdentifier>{4515acfe-1e6b-48c3-a772-751d8db5988e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\qxtglobalshortcut">
+      <UniqueIdentifier>{35e7633e-1e4f-4648-a848-51d7f49dcbd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ConfigData">
+      <UniqueIdentifier>{38066249-123b-4c0b-8b19-156eb7461b6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ConfigData">
+      <UniqueIdentifier>{89f07393-5613-4303-ad5c-39c82817e2de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\platform">
+      <UniqueIdentifier>{d8ad08b8-2ca2-41f1-a5ea-aaaac6a856ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\platform\file">
+      <UniqueIdentifier>{7d3fab8a-f41c-4a31-8cf9-ad59b621653a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform">
+      <UniqueIdentifier>{2d55015d-401d-4500-93ed-7f384b45eb37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\platform\file">
+      <UniqueIdentifier>{96ab3178-5b4a-4298-817f-7bd74c643e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="PtEngine">
+      <UniqueIdentifier>{874c0a03-7fff-4cce-9a90-48f6f70cd2ff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="psnip.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_psnip.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_psnip.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_psnip.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_modifybutton.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_modifybutton.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pe_snapshotlist.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_pe_snapshotlist.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pe_qdisplaydialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_pe_qdisplaydialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pe_qscreendialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_pe_qscreendialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_QSnapshotItem.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qsnapshotitem.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qsnapshotitem.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_snapshotlist.cpp">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="modifybutton.cpp">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_qsnapshotitem.cpp">
+      <Filter>Source Files\Plugins</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_qscreendialog.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_qdisplaydialog.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_qxtglobalshortcut.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_qxtglobalshortcut.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="qxtglobalshortcut\qxtglobalshortcut.cpp">
+      <Filter>Source Files\qxtGlobalshortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="qxtglobalshortcut\qxtglobalshortcut_win.cpp">
+      <Filter>Source Files\qxtGlobalshortcut</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_File.cpp">
+      <Filter>Source Files\platform\file</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_qdisplayCollectiondialog.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pe_qdisplayCollectiondialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_pe_qdisplayCollectiondialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="log\Pt_log.cpp">
+      <Filter>PtEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="typedef\typedef.cpp">
+      <Filter>PtEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="windows\Event\Cube_Event.cpp">
+      <Filter>PtEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="windows\network\src\Cube_SocketTCP.cpp">
+      <Filter>PtEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="windows\network\src\Cube_SocketUDP.cpp">
+      <Filter>PtEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="windows\network\src\Cube_TCPFastIO.cpp">
+      <Filter>PtEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="windows\network\src\Cube_Thread.cpp">
+      <Filter>PtEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="windows\system\Pt_System.cpp">
+      <Filter>PtEngine</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="psnip.h">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="psnip.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_imageslistdialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="QSnapshotItem.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_qdisplaydialog.h">
+      <Filter>Header Files\GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_qscreendialog.h">
+      <Filter>Header Files\GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="modifybutton.h">
+      <Filter>Header Files\plugins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_snapshotlist.h">
+      <Filter>Header Files\plugins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qsnapshotitem.h">
+      <Filter>Header Files\plugins</Filter>
+    </CustomBuild>
+    <CustomBuild Include="qxtglobalshortcut\qxtglobalshortcut.h">
+      <Filter>Header Files\qxtglobalshortcut</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_ConfigWidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_ProjectWidget.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_ColorHelperDialog.h">
+      <Filter>Header Files\GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_ColorHelperDialog.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_qdisplayCollectiondialog.h">
+      <Filter>Header Files\GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_Donate.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_pe_imageslistdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qxtglobalshortcut\qxtglobal.h">
+      <Filter>Header Files\qxtglobalshortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="qxtglobalshortcut\qxtglobalshortcut_p.h">
+      <Filter>Header Files\qxtglobalshortcut</Filter>
+    </ClInclude>
+    <ClInclude Include="pe_ConfigFile.h">
+      <Filter>Header Files\ConfigData</Filter>
+    </ClInclude>
+    <ClInclude Include="pe_File.h">
+      <Filter>Header Files\platform\file</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_pe_ConfigWidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mutex_Win32.hpp">
+      <Filter>Header Files\platform\file</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_pe_ProjectWidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_pe_ColorHelperDialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_pe_Donate.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="log\Pt_log.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="typedef\Pt_MathTable.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="typedef\typedef.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\Event\Cube_Event.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\network\inc\Cube_AsynIO.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\network\inc\Cube_SocketHeader.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\network\inc\Cube_SocketTCP.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\network\inc\Cube_SocketUDP.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\network\inc\Cube_TCPFastIO.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\network\inc\Cube_Thread.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\system\Pt_System.h">
+      <Filter>PtEngine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="psnip_zh.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="psnip_en.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ICO.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/QSnapshotItem">
+        <file>Resources/close.png</file>
+        <file>Resources/close_Cursor.png</file>
+        <file>Resources/close_down.png</file>
+        <file>Resources/cut.png</file>
+        <file>Resources/cut_Cursor.png</file>
+        <file>Resources/cut_down.png</file>
+        <file>Resources/delete.png</file>
+        <file>Resources/delete_Cursor.png</file>
+        <file>Resources/delete_Down.png</file>
+        <file>Resources/open.png</file>
+        <file>Resources/open_Cursor.png</file>
+        <file>Resources/open_down.png</file>
+        <file>Resources/Restore.png</file>
+        <file>Resources/Restore_Cursor.png</file>
+        <file>Resources/Restore_Down.png</file>
+        <file>Resources/save.png</file>
+        <file>Resources/save_Cursor.png</file>
+        <file>Resources/save_down.png</file>
+        <file>Resources/scale.png</file>
+        <file>Resources/scale_Cursor.png</file>
+        <file>Resources/scale_down.png</file>
+        <file>Resources/CursorLeft.png</file>
+        <file>Resources/CursorRight.png</file>
+        <file>Resources/Pick.png</file>
+        <file>Resources/Pick_Cursor.png</file>
+        <file>Resources/Pick_down.png</file>
+    </qresource>
+    <qresource prefix="/ScreenShot">
+        <file>Resources/bl.png</file>
+        <file>Resources/br.png</file>
+        <file>Resources/tl.png</file>
+        <file>Resources/tr.png</file>
+    </qresource>
+</RCC>

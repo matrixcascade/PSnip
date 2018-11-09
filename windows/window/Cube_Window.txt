@@ -1,0 +1,21 @@
+类：Cube_Window
+
+移植性支持：Windows 平台，C++
+
+Create(int Width,int Height); 创建一个窗体，并指定其宽高
+
+HWND GetHwnd(); 取得这个窗体的句柄
+	
+int  GetHeight();取得这个窗体的高
+	
+int  GetWidth();取得这个窗体的宽
+	
+void SetPosition(int x,int y);设置这个窗体的位置
+	
+void GetTitle(char *Text,int size) 取得窗体名字，size为Text数组大小
+
+void SetTitle(char *Name);设置这个窗体的名字
+	
+void show();显示窗体
+	
+void hide();隐藏窗体
