@@ -5,12 +5,13 @@
 //Color helper dialog
 //////////////////////////////////////////////////////////////////////////
 #include "pe_ColorHelperDialog.h"
-
+#include "pe_qbrushdialog.h"
 
 #define  DISPLAYDIALOG_STATUS_DRAGMODE		0
 #define  DISPLAYDIALOG_STATUS_CUTMODE		1
 #define  DISPLAYDIALOG_STATUS_PICKCOLORMODE	2
 #define  DISPLAYDIALOG_STATUS_MINIMODE		3
+#define  DISPLAYDIALOG_STATUS_PAINTMODE		4
 
 #define  DISPLAYDIALOG_MINI_SIZE			64
 
@@ -40,8 +41,10 @@ public:
 	void DoCut();
 	void NormalMode();
 	void EnterCutMode();
+	void EnterPaintMode();
 	void EnterMiniMode(QPoint ClickedPoint);
 	void ExitCutMode();
+	void ExitPaintMode();
 	void EnterPickMode();
 	void ExitPickMode();
 	void MoveColorHelperDialog(QPoint);
@@ -81,6 +84,9 @@ public:
 	
 	void SLOT_Menu_Close();
 	void SLOT_Menu_Cut();
+	void SLOT_Menu_Flip_H();
+	void SLOT_Menu_Flip_V();
+	void SLOT_Menu_Pen();
 	void SLOT_Menu_Pick();
 	void SLOT_Menu_CopyCurrent();
 	void SLOT_Menu_CopySource();
@@ -105,7 +111,7 @@ public:
 	int		m_opt;
 	int     m_ID;
 	QPixmap m_Pixmap;
-	bool    m_bMoving, m_bCutting, m_bBorder, m_bDraggingOpt;
+	bool    m_bMoving, m_bCutting, m_bBorder, m_bDraggingOpt,m_bpainting;
 	QColor  m_BorderColor;
 	int     m_Status, m_LastStatus;
 	QPoint  m_MovingStartPoint;
@@ -120,12 +126,13 @@ public:
 	QCursor m_cursor_move,m_cursor_cut,m_cursor_pick;
 	QPixmap m_RenderPixmap;
 	pe_SubColorHelperDialog *m_ColorHelperDialog;
+	pe_qBrushDialog *m_BrushDialog;
 	QImage  m_CacheImage;
 	float   m_LastOpacity;
 	QMenu   *m_menu;
 	QAction *m_Menu_CollapseAll, *m_Menu_MiniRestore,*m_Menu_Close, *m_Menu_Cut, *m_Menu_Pick, *m_Menu_CopyCurrent, *m_Menu_AlphaAdd;
-	QAction *m_Menu_AlphaSubtract, *m_Menu_Restore, *m_Menu_Save, *m_Menu_CopySource,*m_Menu_DeleteThis;
-
+	QAction *m_Menu_AlphaSubtract, *m_Menu_Restore, *m_Menu_Save, *m_Menu_CopySource,*m_Menu_DeleteThis,*m_Menu_Flip_Horizontal,*m_Menu_Flip_Vertical,*m_Menu_Pen;
+	QPoint  m_lastDrawPoint;
 };
 
 #endif // PE_QDISPLAYDIALOG_H

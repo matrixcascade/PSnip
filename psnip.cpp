@@ -33,7 +33,7 @@ bool PSnip::Initialize()
 	}
 	
 	m_DonateDlg = new DonateDialog(m_ManagerDialog);
-	connect(m_ManagerDialog->m_ConfigWidget.pushButton_Donate, SIGNAL(clicked()), m_DonateDlg, SLOT(show()));
+	connect(m_ManagerDialog->m_ConfigWidget.pushButton_Donate, SIGNAL(clicked()), this, SLOT(SLOT_ViewSource()));
 	QString cfgPath = qApp->applicationDirPath() + PSNIP_CFG_FILEPATH;
 	
 	if (!m_cfg.LoadCfgFile(cfgPath.toStdString().c_str()))
@@ -1205,7 +1205,7 @@ void PSnip::SLOT_DisplayDialog_onDraggedDone(QPoint point, pe_qDisplayDialog *dl
 				{
 					dlg->RestoreMoved();
 					dlg->CloseDirectly();
-					m_DataInfo[i].pDisplayCollectionDialog->AddPixmap(dlg->GetSourcePixmap());
+					m_DataInfo[i].pDisplayCollectionDialog->AddPixmap(dlg->GetCurrentDisplayPixmap());
 				}
 				m_DataInfo[i].pDisplayCollectionDialog->ExitPreview();
 			}
@@ -1257,6 +1257,11 @@ void PSnip::SLOT_Quit()
 		}
 	}
 	exit(0);
+}
+
+void PSnip::SLOT_ViewSource()
+{
+	QDesktopServices::openUrl(QUrl("https://github.com/matrixcascade/PSnip"));
 }
 
 void PSnip::SLOT_SwitchToEN()

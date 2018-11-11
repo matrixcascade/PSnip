@@ -9,6 +9,7 @@
 #include <QFileDialog>
 #include <QSystemTrayIcon>
 #include <QTranslator>
+#include <QDesktopServices>
 
 //////////////////////////////////////////////////////////////////////////
 // PSnip data exchange center class
@@ -356,6 +357,7 @@ public:
 	void SLOT_onMessageError(QString);
 	void SLOT_MiniSwitch();
 	void SLOT_Quit();
+	void SLOT_ViewSource();
 	void SLOT_SwitchToEN();
 	void SLOT_SwitchToZh();
 	void SLOT_Progress(QString Msg, int prog, int current);

@@ -26,25 +26,16 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-199</y>
-        <width>397</width>
-        <height>858</height>
+        <y>0</y>
+        <width>439</width>
+        <height>671</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="spacing">
         <number>0</number>
        </property>
-       <property name="leftMargin">
-        <number>0</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <property name="rightMargin">
-        <number>0</number>
-       </property>
-       <property name="bottomMargin">
+       <property name="margin">
         <number>0</number>
        </property>
        <item>
@@ -53,16 +44,7 @@
           <property name="spacing">
            <number>5</number>
           </property>
-          <property name="leftMargin">
-           <number>5</number>
-          </property>
-          <property name="topMargin">
-           <number>5</number>
-          </property>
-          <property name="rightMargin">
-           <number>5</number>
-          </property>
-          <property name="bottomMargin">
+          <property name="margin">
            <number>5</number>
           </property>
           <item>
@@ -279,14 +261,14 @@
                 <item>
                  <widget class="QLabel" name="label_3">
                   <property name="text">
-                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;PSnip alpha&lt;/p&gt;&lt;p&gt;建议平台：&lt;/p&gt;&lt;p&gt;windows 7或更高版本&lt;/p&gt;&lt;p&gt;新帝高分辨率数位屏及平板&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;PSnip 美术参考图工具&lt;/span&gt;&lt;/p&gt;&lt;p&gt;PSnip是一款免费，开源的参考图软件： &lt;/p&gt;&lt;p&gt;为提升绘画制图效率及更好的操作体验而生!&lt;br/&gt;&lt;/p&gt;&lt;p&gt;PSnip v1.0 code by DBinary&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                   </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QPushButton" name="pushButton_Donate">
                   <property name="text">
-                   <string>Good job</string>
+                   <string>查看PSnip完整源代码(View source codes)</string>
                   </property>
                  </widget>
                 </item>

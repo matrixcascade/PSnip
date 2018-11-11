@@ -13,10 +13,13 @@ pe_qDisplayDialog::pe_qDisplayDialog(QWidget *parent)
 	m_LastStatus=0;
 	m_OffsetVector=QPoint(0,0);
 	m_ColorHelperDialog = new pe_SubColorHelperDialog(this);
+	m_BrushDialog=new pe_qBrushDialog(this);
+	m_BrushDialog->setModal(false);
+	m_bpainting=false;
 	m_ColorHelperDialog->setVisible(false);
 	this->setWindowFlags(Qt::FramelessWindowHint | Qt::WindowSystemMenuHint | Qt::Tool | Qt::WindowStaysOnTopHint);
 	this->setModal(false);
-
+	
 	m_cursor_move = QCursor(Qt::ArrowCursor);
 	m_cursor_cut = QCursor(QPixmap(":/QSnapshotItem/Resources/cut.png"),0,0);
 	m_cursor_pick = QCursor(QPixmap(":/QSnapshotItem/Resources/Pick.png"), 0, 31);
@@ -86,6 +89,9 @@ pe_qDisplayDialog::pe_qDisplayDialog(QWidget *parent)
 	m_Menu_CollapseAll = new QAction(this);
 	m_Menu_DeleteThis = new QAction(this);
 	m_Menu_MiniRestore = new QAction(this);
+	m_Menu_Flip_Horizontal=new QAction(this);
+	m_Menu_Flip_Vertical=new QAction(this);
+	m_Menu_Pen=new QAction(this);
 
 	m_Menu_MiniRestore->setText(tr("Restore"));
 	m_Menu_DeleteThis->setText(tr("Delete this"));
@@ -99,9 +105,15 @@ pe_qDisplayDialog::pe_qDisplayDialog(QWidget *parent)
 	m_Menu_Save->setText(tr("Save to (Ctrl+S)"));
 	m_Menu_AlphaAdd->setText(tr("Increase opacity (Ctrl+Up)"));
 	m_Menu_AlphaSubtract->setText(tr("Decrease opacity (Ctrl+Down)"));
+	m_Menu_Flip_Horizontal->setText(tr("Flip Horizontal"));
+	m_Menu_Flip_Vertical->setText(tr("Flip Vertical"));
+	m_Menu_Pen->setText(tr("Pen"));
 
 	connect(m_Menu_Close, SIGNAL(triggered()), this, SLOT(SLOT_Menu_Close()));
 	connect(m_Menu_Cut, SIGNAL(triggered()), this, SLOT(SLOT_Menu_Cut()));
+	connect(m_Menu_Flip_Horizontal, SIGNAL(triggered()), this, SLOT(SLOT_Menu_Flip_H()));
+	connect(m_Menu_Flip_Vertical, SIGNAL(triggered()), this, SLOT(SLOT_Menu_Flip_V()));
+	connect(m_Menu_Pen, SIGNAL(triggered()), this, SLOT(SLOT_Menu_Pen()));
 	connect(m_Menu_Pick, SIGNAL(triggered()), this, SLOT(SLOT_Menu_Pick()));
 	connect(m_Menu_CopyCurrent, SIGNAL(triggered()), this, SLOT(SLOT_Menu_CopyCurrent()));
 	connect(m_Menu_CopySource, SIGNAL(triggered()), this, SLOT(SLOT_Menu_CopySource()));
@@ -300,6 +312,17 @@ void pe_qDisplayDialog::EnterCutMode()
 	this->setCursor(m_cursor_cut);
 }
 
+void pe_qDisplayDialog::EnterPaintMode()
+{
+	if (m_Status == DISPLAYDIALOG_STATUS_MINIMODE)
+	{
+		return;
+	}
+
+	m_Status = DISPLAYDIALOG_STATUS_PAINTMODE;
+	this->setCursor(Qt::CrossCursor);
+}
+
 void pe_qDisplayDialog::EnterMiniMode(QPoint ClickedPoint)
 {
 	m_NormalLastSize = this->size();
@@ -311,8 +334,13 @@ void pe_qDisplayDialog::EnterMiniMode(QPoint ClickedPoint)
 
 void pe_qDisplayDialog::ExitCutMode()
 {
-
 	NormalMode();
+}
+
+void pe_qDisplayDialog::ExitPaintMode()
+{
+	NormalMode();
+	m_BrushDialog->hide();
 }
 
 void pe_qDisplayDialog::EnterPickMode()
@@ -432,6 +460,9 @@ void pe_qDisplayDialog::ExecMenu()
 		m_menu->addAction(m_Menu_CopyCurrent);
 		m_menu->addAction(m_Menu_Restore);
 		m_menu->addAction(m_Menu_Save);
+		m_menu->addAction(m_Menu_Flip_Horizontal);
+		m_menu->addAction(m_Menu_Flip_Vertical);
+		m_menu->addAction(m_Menu_Pen);
 	}
 	else
 	{
@@ -534,6 +565,7 @@ void pe_qDisplayDialog::paintEvent(QPaintEvent *event)
 		pt.setPen(bPen);
 		bPen.setWidth(4);
 		pt.drawRect(QRect(0,0,width()-1,height()-1));
+		
 	}
 }
 
@@ -559,6 +591,20 @@ void pe_qDisplayDialog::mousePressEvent(QMouseEvent *event)
 		}
 	}
 	break;
+	case DISPLAYDIALOG_STATUS_PAINTMODE:
+		{
+			switch (event->button()) {
+			case Qt::LeftButton:
+				m_lastDrawPoint = event->pos();
+				m_bpainting=true;
+				break;
+			case Qt::RightButton:
+				ExitPaintMode();
+				break;
+			}
+		}
+		break;
+
 	case DISPLAYDIALOG_STATUS_CUTMODE:
 	{
 		if (!m_bCutting) {
@@ -620,6 +666,20 @@ void pe_qDisplayDialog::mouseMoveEvent(QMouseEvent *event) {
 		}
 	}
 	break;
+
+	case DISPLAYDIALOG_STATUS_PAINTMODE:
+	{
+		QImage image=m_RenderPixmap.toImage();
+		QPainter painter(&image);
+		QPen pen(m_BrushDialog->GetColor());
+		pen.setWidthF(m_BrushDialog->GetLineWidth());
+		painter.setPen(pen);
+		painter.drawLine(m_lastDrawPoint,event->pos());
+		m_lastDrawPoint=event->pos();
+		m_RenderPixmap=QPixmap::fromImage(image);
+		this->update();
+	}
+	break;
 	case  DISPLAYDIALOG_STATUS_PICKCOLORMODE:
 	{
 		if (!m_ColorHelperDialog->isVisible())
@@ -673,6 +733,9 @@ void pe_qDisplayDialog::keyPressEvent(QKeyEvent *event)
 		case DISPLAYDIALOG_STATUS_PICKCOLORMODE:
 			ExitPickMode();
 			break;
+		case DISPLAYDIALOG_STATUS_PAINTMODE:
+			ExitPaintMode();
+			break;
 		}
 	}
 }
@@ -706,6 +769,15 @@ void pe_qDisplayDialog::mouseReleaseEvent(QMouseEvent *event)
 			emit SIGNAL_onDraggedDone(event->globalPos(), this);
 		}
 	}
+	break;
+
+	case DISPLAYDIALOG_STATUS_PAINTMODE:
+		{
+			if (m_bpainting)
+			{
+				m_bpainting=false;
+			}
+		}
 		break;
 	case DISPLAYDIALOG_STATUS_CUTMODE:
 		{
@@ -862,6 +934,36 @@ void pe_qDisplayDialog::SLOT_Menu_Cut()
 	{
 		EnterCutMode();
 	}
+}
+
+
+
+void pe_qDisplayDialog::SLOT_Menu_Flip_H()
+{
+	if (!m_RenderPixmap.isNull())
+	{
+		QImage img=m_RenderPixmap.toImage();
+		img=img.mirrored(true,false);
+		m_RenderPixmap=QPixmap::fromImage(img);
+		this->update();
+	}
+}
+
+void pe_qDisplayDialog::SLOT_Menu_Flip_V()
+{
+	if (!m_RenderPixmap.isNull())
+	{
+		QImage img=m_RenderPixmap.toImage();
+		img=img.mirrored(false,true);
+		m_RenderPixmap=QPixmap::fromImage(img);
+		this->update();
+	}
+}
+
+void pe_qDisplayDialog::SLOT_Menu_Pen()
+{
+	EnterPaintMode();
+	m_BrushDialog->show();
 }
 
 void pe_qDisplayDialog::SLOT_Menu_Pick()

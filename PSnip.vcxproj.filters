@@ -190,6 +190,15 @@
     <ClCompile Include="windows\system\Pt_System.cpp">
       <Filter>PtEngine</Filter>
     </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pe_qbrushdialog.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_pe_qbrushdialog.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="pe_qbrushdialog.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="psnip.h">
@@ -239,6 +248,12 @@
     </CustomBuild>
     <CustomBuild Include="pe_Donate.ui">
       <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_Brush.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pe_qbrushdialog.h">
+      <Filter>Header Files\GUI</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
@@ -304,6 +319,9 @@
     </ClInclude>
     <ClInclude Include="windows\system\Pt_System.h">
       <Filter>PtEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_pe_Brush.h">
+      <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
