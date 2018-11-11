@@ -573,7 +573,7 @@ void pe_qDisplayDialog::mousePressEvent(QMouseEvent *event)
 {
 	if(!this->isActiveWindow())
 		this->activateWindow();
-
+	float scale;
 	switch (m_Status)
 	{
 	case DISPLAYDIALOG_STATUS_DRAGMODE:
@@ -581,6 +581,7 @@ void pe_qDisplayDialog::mousePressEvent(QMouseEvent *event)
 	{
 		switch (event->button()) {
 		case Qt::LeftButton:
+			
 			m_bMoving = true;
 			m_MovingStartPoint = this->pos();
 			m_OffsetVector = event->globalPos() - this->frameGeometry().topLeft();
@@ -595,7 +596,8 @@ void pe_qDisplayDialog::mousePressEvent(QMouseEvent *event)
 		{
 			switch (event->button()) {
 			case Qt::LeftButton:
-				m_lastDrawPoint = event->pos();
+				scale=m_RenderPixmap.height()*1.0/this->height();
+				m_lastDrawPoint = event->pos()*scale;
 				m_bpainting=true;
 				break;
 			case Qt::RightButton:
@@ -672,10 +674,11 @@ void pe_qDisplayDialog::mouseMoveEvent(QMouseEvent *event) {
 		QImage image=m_RenderPixmap.toImage();
 		QPainter painter(&image);
 		QPen pen(m_BrushDialog->GetColor());
+		float scale=m_RenderPixmap.height()*1.0/this->height();
 		pen.setWidthF(m_BrushDialog->GetLineWidth());
 		painter.setPen(pen);
-		painter.drawLine(m_lastDrawPoint,event->pos());
-		m_lastDrawPoint=event->pos();
+		painter.drawLine(m_lastDrawPoint,event->pos()*scale);
+		m_lastDrawPoint=event->pos()*scale;
 		m_RenderPixmap=QPixmap::fromImage(image);
 		this->update();
 	}
